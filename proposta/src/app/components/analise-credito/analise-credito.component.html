@@ -1,0 +1,26 @@
+<br /><br />
+
+<table>
+  <button
+    class="btn-cadastrar"
+    [routerLink]="['/']"
+    routerLinkActive="router-link-active"
+  >
+    Voltar
+  </button>
+  <br /> <br>
+  <tr>
+    <th>Nome</th>
+    <th>CPF</th>
+    <th>Valor</th>
+    <th>Prazo</th>
+    <th>Status</th>
+  </tr>
+  <tr *ngFor="let proposta of proposta">
+    <td>{{ proposta.nome }}</td>
+    <td>{{ proposta.cpf }}</td>
+    <td>R$ {{ proposta.valorSolicitado }}</td>
+    <td>{{ proposta.prazoPagamento }} meses</td>
+    <td>{{ proposta.observacao }} Em Análise</td>
+  </tr>
+</table>

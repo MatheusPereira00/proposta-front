@@ -6,10 +6,14 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from "@angular/common/http";
 import { NgFor, NgIf } from '@angular/common';
+import { AnaliseCreditoComponent } from './components/analise-credito/analise-credito.component';
+import { SolicitacaoComponent } from './components/solicitacao/solicitacao.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AnaliseCreditoComponent,
+    SolicitacaoComponent,
   ],
   imports: [
     BrowserModule,

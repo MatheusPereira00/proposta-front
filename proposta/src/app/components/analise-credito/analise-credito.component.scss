@@ -1,0 +1,29 @@
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: auto;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
+/* Estilo do botão cadastrar */
+.btn-cadastrar {
+  background-color: #405c7a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-cadastrar:hover {
+  background-color: #45a049;
+}

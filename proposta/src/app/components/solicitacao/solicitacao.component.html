@@ -1,0 +1,131 @@
+<br />
+<div #popupSucesso class="popup-container">
+  <div class="popup">
+    <h2 class="popup-titulo">Enviado com Sucesso!</h2>
+    <p class="popup-mensagem">Seu formulário foi enviado com sucesso.</p>
+    <button class="popup-botao" (click)="fecharPopup(popupSucessoRef)">
+      Fechar
+    </button>
+  </div>
+</div>
+
+<div #popupErro class="popup-container popup-erro">
+  <div class="popup">
+    <h2 class="popup-titulo">Falha no Envio</h2>
+    <p class="popup-mensagem">
+      Ocorreu um erro ao enviar o formulário. Tente novamente mais tarde.
+    </p>
+    <button class="popup-botao" (click)="fecharPopup(popupErroRef)">
+      Fechar
+    </button>
+  </div>
+</div>
+<br /><br />
+<div class="container">
+  <form [formGroup]="creditoForm" (ngSubmit)="createProposta()">
+    <div class="row">
+      <div
+        style="margin-left: 20rem"
+        class="loader"
+        [hidden]="!carregando"
+      ></div>
+      <div class="col">
+        <input
+          type="text"
+          id="nome"
+          formControlName="nome"
+          required
+          placeholder="Nome"
+        />
+      </div>
+      <div class="col">
+        <input
+          type="text"
+          id="sobrenome"
+          formControlName="sobrenome"
+          required
+          placeholder="Sobrenome"
+        />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <!-- <label for="telefone">Telefone:</label> -->
+        <input
+          type="tel"
+          id="telefone"
+          formControlName="telefone"
+          required
+          placeholder="(xx) xxxxx-xxxx"
+        />
+      </div>
+      <div class="col">
+        <!-- <label for="cpf">CPF:</label> -->
+        <input
+          type="text"
+          id="cpf"
+          formControlName="cpf"
+          required
+          placeholder="000.000.000-00"
+        />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <input
+          type="number"
+          id="renda"
+          formControlName="renda"
+          required
+          placeholder="Renda salarial"
+        />
+      </div>
+      <div class="col">
+        <input
+          type="number"
+          id="valorSolicitado"
+          formControlName="valorSolicitado"
+          required
+          placeholder="Valor solicitado"
+        />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <label for="prazoPagamento">Prazo de Pagamento (em meses):</label>
+        <select id="prazoPagamento" formControlName="prazoPagamento" required>
+          <option value="6">6 meses</option>
+          <option value="12">12 meses</option>
+          <option value="18">18 meses</option>
+          <option value="24">24 meses</option>
+          <option value="36">36 meses</option>
+        </select>
+      </div>
+    </div>
+
+    <button
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="carregando"
+      [routerLink]="['/analise']"
+      routerLinkActive="router-link-active"
+    >
+      Solicitar
+    </button>
+
+    <button
+      style="margin-left: 1rem"
+      class="btn btn-primary"
+      [routerLink]="['analises']"
+      routerLinkActive="router-link-active"
+    >
+      Analises
+    </button>
+  </form>
+</div>
+
+<br /><br /><br />
+<br />

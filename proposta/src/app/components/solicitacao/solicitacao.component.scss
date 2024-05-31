@@ -1,0 +1,183 @@
+.container {
+  max-width: 800px;
+  margin: auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.col {
+  flex: 1;
+  margin-right: 15px;
+  padding: 5px;
+}
+
+@media (max-width: 768px) {
+  .col {
+    flex: 100%; /* Todos os campos ocupam 100% da largura na tela menor */
+  }
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Estilos existentes */
+
+.btn {
+  background-color: #405c7a;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-secondary {
+  margin-top: 0.5rem;
+  background-color: #44874c;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.loader {
+  width: 80px;
+  height: 80px;
+  border: 10px solid #f3f3f3; /* Cor da borda */
+  border-radius: 50%; /* Borda arredondada */
+  border-top: 10px solid #3498db; /* Cor da animação */
+  animation: spin 1.2s linear infinite; /* Animação de rotação */
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.popup-container {
+  display: none; /* Esconde os popups */
+  position: fixed; /* Posicionamento fixo na tela */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centraliza os popups */
+  z-index: 1000; /* Garante que os popups fiquem em cima de outros elementos */
+}
+
+.popup {
+  background-color: #fff; /* Cor de fundo do popup */
+  padding: 20px;
+  border-radius: 5px; /* Bordas arredondadas */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+
+.popup-titulo {
+  margin-top: 0;
+}
+
+.popup-mensagem {
+  margin-bottom: 20px;
+}
+
+.popup-botao {
+  padding: 10px 20px;
+  background-color: #4caf50; /* Verde para sucesso */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup-erro .popup-botao {
+  background-color: #f44336; /* Vermelho para falha */
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px auto;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
+/* Estilo do botão cadastrar */
+.btn-cadastrar {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-cadastrar:hover {
+  background-color: #45a049;
+}
