@@ -9,5 +9,4 @@ export interface Propsota {
     prazoPagamento: number;
     aprovado: boolean;
     observacao: string;
-
 }
